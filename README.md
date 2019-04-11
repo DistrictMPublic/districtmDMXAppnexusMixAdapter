@@ -73,6 +73,9 @@ gulp build --modules=districtmDMXAppnexusMixAdapter,ixBidAdapter,appnexusBidAdap
 gulp build --modules=bidderModules.json
 ```
 
+*Note*
+This adapter should not be built with the production districtmDMX module in Prebid, if your build process includes this module please remove it prior to building.
+
 ###### 2. Configure the ad unit object
 
 Once Prebid is ready you may use the below example to create the adUnits object and begin building the configuration.
@@ -114,5 +117,5 @@ Our demand and adapter supports multiple sizes per placement, as such a single d
 
 ###### 4. Implementation Checking
 
-Once the bidder is live in your Prebid configuration you may confirm it is making requests to our end point by looking for requests to `https://dmx.districtm.io/b/v1`. 
+Once the bidder is live in your Prebid configuration you may confirm it is making requests to our end point by looking for requests to `https://dmx.districtm.io/b/v1` and `http://ib.adnxs.com/ut/v3/prebid` with the configured placement IDs.
     
